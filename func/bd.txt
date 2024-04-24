@@ -1,0 +1,124 @@
+
+
+CENTRAL REYKJAVIK HOSPITAL
+100
+100
+10
+1
+Jornoe Jovanna
+100
+200
+Bruno Buchelatti
+456
+987
+Vladimir Ilich Lenin
+116
+116
+Cho Ko Pai
+777
+444
+Kon Chen Iy
+1012
+444
+Ge Mo Roi
+1999
+1999
+Kim Che In
+269
+369
+In Su Len
+1
+1
+aboba
+101
+101
+
+DOWNTOWN REYKJAVIK HOSPITAL
+900
+900
+16
+9
+Billie Herington
+19
+69
+Ya Deb Il
+666
+6666
+Abub pup bubWe Enu Tuen'en'e Ogbe mugmen Osas
+2000
+2000
+Genadii Chidarmyan
+2100
+2300
+Sponge Bob
+3500
+2600
+Sqidward Tentakles
+3510
+2600
+GAGA
+1234
+1234
+
+ICELAND CENTRAL MENTAL HOSPITAL
+6000
+7000
+20
+16
+DIO brando
+6990
+5900
+Ba Tu Kov
+5000
+9090
+Diavolo
+7560
+7560
+ABOBA
+100000
+100000
+
+HOSPITAL named after BILLI HERINGTON
+300
+300
+13
+7
+Monkie De Luffy
+500
+320
+Zoro Roreno
+290
+290
+Evgenii Virshich
+369
+1504
+Goncharov Maksim
+369
+1504
+Artemoo Malishkov
+369
+1504
+Denis Yarohovish
+369
+1504
+
+TEST
+0
+0
+15
+14
+ABOBA
+12
+12
+
+POPA
+1
+1
+123
+121
+d
+1
+1
+2
+2
+2
