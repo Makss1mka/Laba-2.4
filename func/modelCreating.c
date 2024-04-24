@@ -156,7 +156,7 @@ void patientManipulations(hosQueue* hosQueue, char* filePath) {
     
     array_2 places = patientsFind(hosQueue, temp);
 
-    if(places.col == 0) {
+    if(places.row == 0) {
         array_2_free(places);
         printf("\n\tThis patient doesn't settled in any hospital\n");
         return;
