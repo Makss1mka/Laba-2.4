@@ -33,10 +33,17 @@ hospital* createHospital() {
     printf("\t\tInput hospital maximum seats cordinat - ");
     hospital->patients = patQueueInit(hospital->patients, intScanWithLimitCheck(1, 1000, "\t\t"));
 
+    hospital->range = &distanceCounter;
+
     return hospital;
 }
 
 void addPatient(hosQueue* hosQueue, char* filePath) {
+    if (hosQueue->ammount == 0) {
+        printf("\n\t\tThere aren't hospitals in queue.\n");
+        return;
+    }
+
     patient* patient = createPatient();
     hospital* hospital = getHospital(hosQueue, getHospitalByDistance(hosQueue, patient));
 
@@ -46,8 +53,6 @@ void addPatient(hosQueue* hosQueue, char* filePath) {
     }
 
     patQueuePush(hospital->patients, patient);
-
-    queueSave(hosQueue, filePath);
 }
 
 patient* createPatient() {
@@ -71,7 +76,6 @@ patient* createPatient() {
 
 
 
-
 int getHospitalByDistance(hosQueue* hosQueue, patient* patient) {
     hospital* hospital = hosQueue->first;
     double distance, curDistance;
@@ -79,8 +83,8 @@ int getHospitalByDistance(hosQueue* hosQueue, patient* patient) {
 
     for(int i = 0; hospital != NULL; i++) {
         if (hospital->patients->availableSeats == 0) continue;
-
-        curDistance = distanceCounter(hospital->x, hospital->y, patient->x, patient->y);
+        
+        curDistance = hospital->range(hospital->x, hospital->y, patient->x, patient->y);
 
         hospital = getNextHospital(hospital);
 
@@ -105,9 +109,6 @@ double distanceCounter(int hosX, int hosY, int patX, int patY) {
     return sqrt(pow(hosX - patX, 2) + pow(hosY - patY, 2));
 
 }
-
-
-
 
 
 
@@ -174,15 +175,6 @@ void patientManipulations(hosQueue* hosQueue, char* filePath) {
     array_2_free(places);
 }
 
-array_2 array_2_init() {
-    array_2 array;
-    array.data = mallocWithoutNull(0);
-    array.col = 0;
-    array.row = 0;
-
-    return array;
-}
-
 array_2 patientsFind(hosQueue* hosQueue, char* str) {
     hospital* hospital = hosQueue->first;
     patient* patient;
@@ -214,7 +206,6 @@ array_2 patientsFind(hosQueue* hosQueue, char* str) {
 }
 
 void patientDelete(hosQueue* hosQueue, int* place) {
-    printf("\n\tInput the name of patient %d %d - ", place[0], place[1]);
     if(place[0] < 0 || place[0] > hosQueue->ammount) {
         printf("Incorrect argument. This hospital doen't exist.");    
         return;
@@ -254,10 +245,3 @@ void patientDelete(hosQueue* hosQueue, int* place) {
 
 }
 
-void array_2_free(array_2 arr) {
-    for(int i = 0; i < arr.row; i++) {
-        free(arr.data[i]);
-    }
-    free(arr.data);  
-}
-    

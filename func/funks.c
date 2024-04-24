@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "header.h"
+#include "task2.h"
 
 void argsCheck(int argc, char** argv, int num) {
 	if (argc < num) {
@@ -87,7 +88,6 @@ char* strcopy(char copied[]) {
 }
 
 
-
 // FOR FILES
 void* fileOpener(void* filePath, void* mode) {
 	FILE* file = NULL;
@@ -128,4 +128,22 @@ char* lower(char* str) {
 	return temp;
 }
 
+
+// MATRIX
+array_2 array_2_init() {
+    array_2 array;
+    array.data = mallocWithoutNull(0);
+    array.col = 0;
+    array.row = 0;
+
+    return array;
+}
+
+void array_2_free(array_2 arr) {
+    for(int i = 0; i < arr.row; i++) {
+        free(arr.data[i]);
+    }
+    free(arr.data);  
+}
+    
 

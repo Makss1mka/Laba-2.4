@@ -48,30 +48,6 @@ char* getInfixForm(char* prefixForm) {
     return pop(&stc);
 }
 
-int stcLastThreeNULLCheck(stack* stc) {
-
-    return !(stc != NULL && stc->next != NULL && stc->next->next != NULL);
-
-}
-
-int stcLastThreeLinkCheck(stack* stc) {
-
-    return isOperand(stc->data) && isOperand(stc->next->data) && isSign(stc->next->next->data); 
-
-}
-
-int isOperand(char* str) {
-
-    return !isSign(str);
-
-}
-
-int isSign(char* str) {
-
-    return strlen(str) == 1 && in(str[0], "+-*/");
-
-}
-
 
 
 char* operandLink(char sign, char* opr1, char* opr2) {
@@ -155,3 +131,29 @@ int syntaxCheck(char* prefixForm) {
 
     return 0;
 }
+
+int stcLastThreeNULLCheck(stack* stc) {
+
+    return !(stc != NULL && stc->next != NULL && stc->next->next != NULL);
+
+}
+
+int stcLastThreeLinkCheck(stack* stc) {
+
+    return isOperand(stc->data) && isOperand(stc->next->data) && isSign(stc->next->next->data); 
+
+}
+
+int isOperand(char* str) {
+
+    return !isSign(str);
+
+}
+
+int isSign(char* str) {
+
+    return strlen(str) == 1 && in(str[0], "+-*/");
+
+}
+
+

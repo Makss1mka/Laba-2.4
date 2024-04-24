@@ -4,7 +4,7 @@ CENTRAL REYKJAVIK HOSPITAL
 100
 100
 10
-1
+2
 Jornoe Jovanna
 100
 200
@@ -29,9 +29,6 @@ Kim Che In
 In Su Len
 1
 1
-aboba
-101
-101
 
 DOWNTOWN REYKJAVIK HOSPITAL
 900
@@ -56,9 +53,9 @@ Sponge Bob
 Sqidward Tentakles
 3510
 2600
-GAGA
-1234
-1234
+Go Vno Ed
+2600
+4100
 
 ICELAND CENTRAL MENTAL HOSPITAL
 6000
@@ -71,12 +68,12 @@ DIO brando
 Ba Tu Kov
 5000
 9090
+Ya Zagit Lera
+10000
+9560
 Diavolo
 7560
 7560
-ABOBA
-100000
-100000
 
 HOSPITAL named after BILLI HERINGTON
 300
@@ -103,22 +100,7 @@ Denis Yarohovish
 1504
 
 TEST
-0
-0
-15
-14
-ABOBA
-12
-12
-
-POPA
-1
-1
-123
-121
-d
-1
-1
-2
-2
-2
+999
+999
+10
+10

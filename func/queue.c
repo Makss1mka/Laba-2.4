@@ -79,8 +79,9 @@ hospital* hosQueuePop(hosQueue* hosQueue) {
     hospital = hosQueue->first;
     
     hosQueue->first = hosQueue->first->next;
-    hosQueue->first->prev = NULL;
 
+    if (hosQueue->first != NULL) hosQueue->first->prev = NULL;
+    
     hospital->next = NULL;
     hospital->prev = NULL;
 
@@ -96,7 +97,8 @@ patient* patQueuePop(patQueue* patQueue) {
     patient = patQueue->first;
 
     patQueue->first = patQueue->first->next;
-    patQueue->first->prev = NULL;
+
+    if (patQueue->first != NULL) patQueue->first->prev = NULL;
 
     patient->next = NULL;
     patient->prev = NULL;

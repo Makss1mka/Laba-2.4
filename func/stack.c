@@ -23,14 +23,6 @@ char* pop(stack** top) {
     return data;
 }
 
-stack* strToStc(stack** stc, char* str) {
-    for(int i = 0; i < strlen(str); i++) {
-        *stc = push(*stc, chrToStr(str[i]));
-    }
-    
-    return *stc;
-}
-
 stack* getNext(stack* stack) {
 
     return stack->next;

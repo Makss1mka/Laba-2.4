@@ -9,7 +9,7 @@
 void main(int argc, char* argv[]) {
     argsCheck(argc, argv, 1);
 
-    char filePath[] = "C:\\Users\\User\\Desktop\\PopuskPapka\\C\\laba2.4\\bd.txt";
+    char filePath[] = "bd.txt";
 
     while (1) {
 		printf("\nPick the task - ");
@@ -23,7 +23,6 @@ void main(int argc, char* argv[]) {
 		}
 	}
 
-    
 }
 
-// c:\Users\User\Desktop\PopuskPapka\C\laba2.4
+// c:\Users\User\Desktop\PopuskPapka\C\laba2.4 C:\\Users\\User\\Desktop\\PopuskPapka\\C\\laba2.4\\a

@@ -7,7 +7,6 @@ typedef struct Stack {
 
 stack* push(stack* top, char* data);
 char* pop(stack** top);
-stack* strToStc(stack** stc, char* str);
 stack* get(stack* stc, int ind);
 stack* getNext(stack* stack);
 void printStack(stack* stc, char message[]);

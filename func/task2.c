@@ -90,6 +90,8 @@ hospital* readOneHosEntry(FILE* file) {
 
 	fscanf(file, "%d\n", &temp);
 
+	hospital->range = &distanceCounter;
+
 	for(int i = 0; i < hospital->patients->maxSeats - temp; i++) {
 		patQueuePush(hospital->patients, readOnePatEntry(file));
 	}

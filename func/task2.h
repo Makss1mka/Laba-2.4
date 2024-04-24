@@ -26,7 +26,7 @@ typedef struct Hospital {
     char* name;
     int x;
     int y;
-    int (*range) (FILE*);
+    double (*range) (int, int, int, int);
 
     patQueue* patients;
 
